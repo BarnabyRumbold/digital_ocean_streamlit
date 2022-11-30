@@ -24,7 +24,8 @@ path=her_path
 
 
 st.set_page_config(
-    page_title="Medito Data Dashboard",page_icon=im)
+    page_title="Medito Data Dashboard")
+    # page_title="Medito Data Dashboard",page_icon=im)
 st.title("Medito's Data Dashboard")
 #st.image("medito_logo.png", width=150)
 st.write("Check out the newest stats and visuals to see how people are liking the Medito app. ")
