@@ -3,9 +3,9 @@
 import streamlit as st
 # from PIL import Image
 import numpy as np
-from app_store.app_store_reviews_reader import AppStoreReviewsReader
-from google_play_scraper import app
-from google_play_scraper import Sort, reviews_all
+# from app_store.app_store_reviews_reader import AppStoreReviewsReader
+# from google_play_scraper import app
+# from google_play_scraper import Sort, reviews_all
 import pycountry
 import pandas as pd
 
