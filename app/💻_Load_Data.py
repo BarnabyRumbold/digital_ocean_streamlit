@@ -17,7 +17,7 @@ import requests
 
 # ### SETUP ###
 loc_path=""
-her_path="../dashboard/"
+her_path=""
 path=her_path
 
 # im = Image.open(path+"favicon-light.ico")
