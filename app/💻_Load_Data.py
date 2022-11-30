@@ -95,7 +95,7 @@ data=pd.DataFrame(reviews_list)
 data_apple =data.rename(columns={"version":"App Version Name","rating": "Star Rating", "title":"Review Title","content": "Review Text","date":"Review Submit Date and Time"})[["App Version Name","Star Rating","Review Title","Review Text", "country", "Review Submit Date and Time", "id"]]
 st.write("We found "+str(data_apple.shape[0])+" reviews.")
 data = pd.concat([data_apple, df])
-# data.to_csv(path+"data.csv") #add [path] for heroku deployment
+data.to_csv(path+"data.csv") #add [path] for heroku deployment
 
 
 st.write("Thanks for waiting, we're done here 😊 Select one of the pages in the navigation.")
