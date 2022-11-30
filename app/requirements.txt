@@ -13,3 +13,4 @@ nltk==3.7
 # string import punctuation as punc
 plotly==5.9.0
 regex==2022.4.24
+altair==4.2.0
