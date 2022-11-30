@@ -8,7 +8,7 @@ import plotly.graph_objs as go
 
 ### SETUP ###
 loc_path=""# for local testing
-her_path="dashboard/"
+her_path=""
 path=her_path
 
 # im = Image.open(path +"favicon-light.ico")
