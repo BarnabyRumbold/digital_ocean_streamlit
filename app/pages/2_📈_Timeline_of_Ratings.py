@@ -34,7 +34,7 @@ if df is not None:
 
 
     df.set_index("Review Submit Date and Time")
-    df["Review Submit Date and Time"] = df["Review Submit Date and Time"].apply(lambda x: datetime.date(1900, x, 1))
+    # df["Review Submit Date and Time"] = df["Review Submit Date and Time"].apply(lambda x: datetime.date(1900, x, 1))
     g_df = df.groupby("Review Submit Date and Time", as_index=False).mean()
     monthly_avg = alt.Chart(df, height=400, width=600).mark_bar().encode(
         x=alt.X("yearmonth(Review Submit Date and Time)",type="temporal"),
