@@ -10,6 +10,7 @@ import pycountry
 from folium import Tooltip
 from streamlit_folium import st_folium
 
+
 ### SETUP ###
 
 loc_path=""# for local testing
@@ -21,8 +22,8 @@ path=her_path
 
 
 st.set_page_config(
-    page_title="Apple Store World Map",
-    page_icon=im)
+    page_title="Apple Store World Map")
+    # page_title="Apple Store World Map", page_icon=im)
 st.title("Apple Store World Map")
 #st.image("medito_logo.png", width=150)
 st.write("This page uses Apple Store Data to show graphically the total downloads by country, from the data you upload. Upload a CSV, then roll over for downloads by territory.")
