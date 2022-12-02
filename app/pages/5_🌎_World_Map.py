@@ -9,6 +9,7 @@ import requests
 import pycountry
 from folium import Tooltip
 from streamlit_folium import st_folium
+from st_aggrid import AgGrid
 
 
 ### SETUP ###
