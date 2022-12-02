@@ -10,11 +10,7 @@ from nltk.tokenize import sent_tokenize
 from nltk.tokenize import RegexpTokenizer
 from string import punctuation as punc
 from nltk.stem import WordNetLemmatizer
-stopwords = nltk.download('stopwords')
-from nltk.corpus import stopwords
-sw = stopwords.words('english')
-sw = set(sw)
-
+from nltk.corpus import stopwords as sw
 import plotly.graph_objs as go
 import re
 
@@ -26,7 +22,8 @@ path=her_path
 im = Image.open(path+"favicon-light.ico")
 
 st.set_page_config(
-    page_title="Medito Data Dashboard", page_icon=im)
+    page_title="Medito Data Dashboard",
+    page_icon=im)
 st.title("Medito's Data Dashboard")
 
 
