@@ -10,7 +10,7 @@ from nltk.tokenize import sent_tokenize
 from nltk.tokenize import RegexpTokenizer
 from string import punctuation as punc
 from nltk.stem import WordNetLemmatizer
-from nltk.corpus import stopwords as sw
+from nltk import stopwords as sw
 import plotly.graph_objs as go
 import re
 
