@@ -34,7 +34,7 @@ if df is not None:
 
 
     df.set_index("Review Submit Date and Time")
-  #  df["Review Submit Date and Time"] = df["Review Submit Date and Time"].apply(lambda x: datetime.date(1900, x, 1))
+    df["Review Submit Date and Time"] = df["Review Submit Date and Time"].apply(lambda x: datetime.date(1900, x, 1))
     g_df = df.groupby("Review Submit Date and Time", as_index=False).mean()
     monthly_avg = alt.Chart(df, height=400, width=600).mark_bar().encode(
         x=alt.X("yearmonth(Review Submit Date and Time)",type="temporal"),
@@ -42,7 +42,7 @@ if df is not None:
         tooltip=alt.Y("Star Rating", aggregate="average"),
         color = alt.value("orange"))
     # Display bar
-  #  line = alt.Chart().mark_rule().encode(y=4.5)
+    # line = alt.Chart().mark_rule().encode(y=4.5)
 
     final_bar = (monthly_avg).properties(height=400, width=600).configure_mark(opacity=1).configure_view(strokeOpacity=0)
     st.subheader("Average Star Rating by Month")
