@@ -10,7 +10,7 @@ from nltk.tokenize import sent_tokenize
 from nltk.tokenize import RegexpTokenizer
 from string import punctuation as punc
 from nltk.stem import WordNetLemmatizer
-nltk.download('stopwords')
+stopwords = nltk.download('stopwords')
 from nltk.corpus import stopwords
 sw = set(stopwords.words('english'))
 
