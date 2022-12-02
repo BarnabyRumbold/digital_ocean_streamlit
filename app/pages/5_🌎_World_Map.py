@@ -18,14 +18,13 @@ her_path=""
 path=her_path
 
 
-# im = Image.open(path+"favicon-light.ico")
+im = Image.open(path+"favicon-light.ico")
 
 
 st.set_page_config(
-    page_title="Apple Store World Map")
-    # page_title="Apple Store World Map", page_icon=im)
+    page_title="Apple Store World Map", page_icon=im)
 st.title("Apple Store World Map")
-#st.image("medito_logo.png", width=150)
+st.image("medito_logo.png", width=150)
 st.write("This page uses Apple Store Data to show graphically the total downloads by country, from the data you upload. Upload a CSV, then roll over for downloads by territory.")
 
 ### DATA IMPORT ###

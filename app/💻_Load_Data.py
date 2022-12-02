@@ -30,7 +30,7 @@ st.image("medito_logo.png", width=150)
 st.write("Check out the newest stats and visuals to see how people are liking the Medito app. ")
 
 ## DATA IMPORT ###
-file = st.file_uploader("Upload Play Store CSV here",type=["csv"])
+# file = st.file_uploader("Upload Play Store CSV here",type=["csv"])
 
 
 top_countries=["es","br","us","co","de", "fr","gn","it","nl","pt"]

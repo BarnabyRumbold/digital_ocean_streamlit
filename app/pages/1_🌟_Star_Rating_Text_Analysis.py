@@ -12,7 +12,8 @@ from string import punctuation as punc
 from nltk.stem import WordNetLemmatizer
 stopwords = nltk.download('stopwords')
 from nltk.corpus import stopwords
-sw = set(stopwords.words('english'))
+sw = stopwords.words('english')
+sw = set(sw)
 
 import plotly.graph_objs as go
 import re
