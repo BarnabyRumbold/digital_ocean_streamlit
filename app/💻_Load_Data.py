@@ -1,7 +1,7 @@
 ### IMPORTS ###
 
 import streamlit as st
-from PIL import Image
+# from PIL import Image
 import numpy as np
 from app_store.app_store_reviews_reader import AppStoreReviewsReader
 from google_play_scraper import app
@@ -20,11 +20,12 @@ loc_path=""
 her_path=""
 path=her_path
 
-im = Image.open(path+"favicon-light.ico")
+# im = Image.open(path+"favicon-light.ico")
 
 
 st.set_page_config(
-    page_title="Medito Data Dashboard",page_icon=im)
+    page_title="Medito Data Dashboard")
+    # page_title="Medito Data Dashboard",page_icon=im)
 st.title("Medito's Data Dashboard")
 #st.image("medito_logo.png", width=150)
 st.write("Check out the newest stats and visuals to see how people are liking the Medito app. ")
