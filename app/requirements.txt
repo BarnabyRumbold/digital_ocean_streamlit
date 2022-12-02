@@ -1,5 +1,5 @@
 streamlit==1.11.1
-# PIL==9.1.1
+PIL==9.1.1
 numpy==1.23.2
 app_store_reviews_reader==1.2
 google_play_scraper==1.2.0
