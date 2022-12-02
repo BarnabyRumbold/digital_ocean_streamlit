@@ -2,7 +2,7 @@
 import streamlit as st
 import pandas as pd
 import datetime
-# from PIL import Image
+from PIL import Image
 
 ### SETUP ###
 
@@ -12,11 +12,10 @@ her_path=""
 path=her_path
 
 
-# im = Image.open(path+"favicon-light.ico")
+im = Image.open(path+"favicon-light.ico")
 
 st.set_page_config(
-    page_title = "Medito Data Dashboard")
-    # page_title="Medito Data Dashboard", page_icon=im)
+    page_title="Medito Data Dashboard", page_icon=im)
 st.title("Medito's Data Dashboard")
 
 ### DATA ###

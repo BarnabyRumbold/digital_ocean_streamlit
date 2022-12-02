@@ -2,7 +2,7 @@
 # from pickletools import read_stringnl_noescape
 import streamlit as st
 import pandas as pd
-# from PIL import Image
+from PIL import Image
 
 
 ### SETUP ###
@@ -11,12 +11,11 @@ loc_path=""# for local testing
 her_path=""
 path=her_path
 
-# im = Image.open(path+"favicon-light.ico")
+im = Image.open(path+"favicon-light.ico")
 
 
 st.set_page_config(
-    page_title="Medito Data Dashboard")
-    # page_title="Medito Data Dashboard", page_icon=im)
+    page_title="Medito Data Dashboard", page_icon=im)
 st.title("Medito's Data Dashboard")
 
 
