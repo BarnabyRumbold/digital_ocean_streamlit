@@ -19,13 +19,6 @@ st.write(type(sw))
 loc_path=""# for local testing
 her_path=""
 path=her_path
-im = Image.open(path+"favicon-light.ico")
-
-st.set_page_config(
-    page_title="Medito Data Dashboard",
-    page_icon=im)
-st.title("Medito's Data Dashboard")
-
 
 st.subheader("Analysis by Star Rating")
 st.write('This page provides language analysis of reviews, looking at the most common words used, filtered by star rating. It also provides review text for a more in depth insight.')
