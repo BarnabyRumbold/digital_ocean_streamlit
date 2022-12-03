@@ -5,7 +5,7 @@ import datetime
 from PIL import Image
 import altair as alt
 import plotly.graph_objs as go
-
+import numpy as np
 
 ### SETUP ###
 loc_path=""# for local testing

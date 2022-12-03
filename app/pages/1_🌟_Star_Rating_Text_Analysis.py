@@ -1,8 +1,4 @@
-import pandas as pd
 import streamlit as st
-from PIL import Image
-import datetime
-import numpy as np
 import pandas as pd
 import datetime
 import nltk
@@ -13,6 +9,7 @@ from nltk.stem import WordNetLemmatizer
 import plotly.graph_objs as go
 import re
 nltk.download('stopwords')
+nltk.download('wordnet')
 from nltk.corpus import stopwords as sw
 st.write(type(sw))
 ### SETUP ###
