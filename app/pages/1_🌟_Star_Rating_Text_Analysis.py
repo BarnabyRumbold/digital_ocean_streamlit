@@ -8,25 +8,30 @@ from string import punctuation as punc
 from nltk.stem import WordNetLemmatizer
 import plotly.graph_objs as go
 import re
+from nltk.corpus import stopwords as sw
+nltk.download()
+nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
-nltk.download('punkt')
-from nltk.corpus import stopwords as sw
+
+
+
 st.write(type(sw))
 ### SETUP ###
-loc_path=""# for local testing
-her_path=""
-path=her_path
+loc_path = ""  # for local testing
+her_path = ""
+path = her_path
 
 st.subheader("Analysis by Star Rating")
-st.write('This page provides language analysis of reviews, looking at the most common words used, filtered by star rating. It also provides review text for a more in depth insight.')
+st.write(
+    'This page provides language analysis of reviews, looking at the most common words used, filtered by star rating. It also provides review text for a more in depth insight.')
 
 try:
-    input_df = pd.read_csv(path+"data.csv")
+    input_df = pd.read_csv(path + "data.csv")
 except FileNotFoundError:
-    st.warning("Ooopps your data was not found 😥 Check if you uploaded the file." )
-    input_df=None
+    st.warning("Ooopps your data was not found 😥 Check if you uploaded the file.")
+    input_df = None
 
 if input_df is not None:
 
@@ -44,11 +49,11 @@ if input_df is not None:
     my_reviews_df['month'] = input_df['datetime'].apply(lambda x: x.month)
     my_reviews_df['rating'] = input_df['Star Rating']
     my_reviews_df['for_version'] = input_df['App Version Name']
-    #my_reviews_df['dev_response'] = input_df['Developer Reply Date and Time']
+    # my_reviews_df['dev_response'] = input_df['Developer Reply Date and Time']
     my_reviews_df['user_review'] = input_df['Review Text']
     my_reviews_df.loc[my_reviews_df['user_review'].isnull(), 'user_review'] = ''
 
-    #rev_res = my_reviews_df.groupby('rating').count()[['user_review', 'dev_response']].reset_index()
+    # rev_res = my_reviews_df.groupby('rating').count()[['user_review', 'dev_response']].reset_index()
     stopwords = set(sw.words('english'))
     stopwords.update(  # TODO: fix it cause some words like 'meditation'
         {'sometimes', 'get', 'i\'m', 'good', 'something', 'give', 'hope', 'that\'s', 'that', 'well', 'please', 'plz',
@@ -105,7 +110,7 @@ if input_df is not None:
 
     tokenizer = RegexpTokenizer("[a-z']{3,}")
 
-    for curr_rating in range(1,6):
+    for curr_rating in range(1, 6):
         review_df = my_reviews_df[my_reviews_df.rating == curr_rating]  # new dataframe for specific star rating
         dic_review = {}
         dic_word = {}
@@ -302,10 +307,9 @@ if input_df is not None:
     text_center = {'text-align': 'center'}
     component_width = {'min-width': '1000px', 'margin': 'auto'}
 
-
     option = st.selectbox(
-         'Which ratings do you want to analyze?',
-         ('Reviews Rating 1', 'Reviews Rating 2', 'Reviews Rating 3','Reviews Rating 4','Reviews Rating 5'))
+        'Which ratings do you want to analyze?',
+        ('Reviews Rating 1', 'Reviews Rating 2', 'Reviews Rating 3', 'Reviews Rating 4', 'Reviews Rating 5'))
 
     if option == 'Reviews Rating 1':
         st.subheader("Reviews Rating 1")
@@ -368,7 +372,7 @@ if input_df is not None:
                         list(ls_dic_review[4].keys())[:number_months]]
         st.write(text_to_show)
     else:
-        pass 
-    #option == 'Reviews Rating All':
-    #st.subheader("Reviews Rating All")
-    #st.plotly_chart(fig_overall)
+        pass
+        # option == 'Reviews Rating All':
+    # st.subheader("Reviews Rating All")
+    # st.plotly_chart(fig_overall)
