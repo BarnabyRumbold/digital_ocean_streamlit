@@ -20,7 +20,5 @@ streamlit-aggrid==0.3.3
 Pillow==9.1
 stopwords
 wordnet
-omw-1.4
-punkt
 
 # from streamlit_folium import st_folium
