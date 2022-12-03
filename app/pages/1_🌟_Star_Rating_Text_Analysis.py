@@ -10,6 +10,7 @@ import plotly.graph_objs as go
 import re
 nltk.download('stopwords')
 nltk.download('wordnet')
+nltk.download('omw-1.4')
 from nltk.corpus import stopwords as sw
 st.write(type(sw))
 ### SETUP ###
