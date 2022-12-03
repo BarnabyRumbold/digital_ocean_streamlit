@@ -11,6 +11,7 @@ import re
 nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
+nltk.download('punkt')
 from nltk.corpus import stopwords as sw
 st.write(type(sw))
 ### SETUP ###
